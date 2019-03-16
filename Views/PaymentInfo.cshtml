@@ -1,0 +1,31 @@
+﻿@{
+    Layout = "";
+}
+@model Nop.Plugin.Payments.ZarinPal.Models.PaymentInfoModel
+
+<table width="100%" cellspacing="2" cellpadding="1" border="0">
+    <tr>
+        <td>
+            <p>
+                <b>@T("Plugins.Payments.ZarinPal.Fields.RedirectionTip")</b>
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.LabelFor(model => model.EMail):
+        </td>
+        <td>
+            @Html.TextBoxFor(model => model.EMail)
+            @Html.ValidationMessageFor(model => model.EMail)
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.LabelFor(model => model.Phonenumber):
+        </td>
+        <td>
+            @Html.TextBoxFor(model => model.Phonenumber)
+        </td>
+    </tr>
+</table>
